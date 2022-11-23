@@ -38,19 +38,37 @@
   width: 100%;
   height: 300px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
 .individualNumbers {
   background-color: orange;
-  height: 75px;
-  width: 100px;
+  height: 70px;
+  width: 80px;
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.vertialOperations {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.squareNumbers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  background-color: darkcyan;
+  padding: 25px;
+  margin: 10px;
+  width: 150px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
