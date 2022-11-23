@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
+
+  const numbers =[1,2,3,4,5,6,7,8,9]
+  const operations = ['+', '-', '*', '/']
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='calc'>
+          <div className='numberSection'>
+            <div>Result</div>
+          </div>
+          <div className='operationSection'>
+            <div className='resultButton'>Result</div>
+            <div className='zeroButton'>Zero</div>
+          </div>
+          <div className='keypadSection'>
+            {
+              numbers.map((num) => {
+                return (
+                  <div className='individualNumbers'>{num}</div>
+                );
+              })
+            }
+          </div>
+      </div>
     </div>
   );
 }
